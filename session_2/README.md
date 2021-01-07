@@ -1,4 +1,4 @@
-# Session 2- Creating a model
+# Session 2 - Migrations & it's usage, Models & it's usage
 In this session, you will learn how to run migrations, create models, validate attributes & create model functions.
 - Navigate to the Student rails project in the session_2 directory in your terminal
 ```bash
@@ -15,23 +15,28 @@ bundle install
 ```bash
 rails db:create
 ```
-
+- [What are migrations?](https://guides.rubyonrails.org/active_record_migrations.html)
+- [Additional reference for Rails migrations](https://www.tutorialspoint.com/ruby-on-rails/rails-migrations.htm)
 - Create a migration to store the following details of students:
 
-* Roll_no - String
-* First name - String
-* Middle name - String
-* Last name - String
-* Branch - String
-* Role ID - Integer
-* CGPA - Float
-* Address - String
+  * Roll_no - String
+  * First name - String
+  * Middle name - String
+  * Last name - String
+  * Branch - String
+  * Role ID - Integer
+  * CGPA - Float
+  * Address - String
 - Run the following command to run migrations, once created.
 
 ```bash
 rake db:migrate
 ```
+- [What is a model?](https://guides.rubyonrails.org/active_record_basics.html)
+- [Additional reference for Rails models](https://www.tutorialspoint.com/ruby-on-rails/rails-models.htm)
 - Create a `Student` model that represents your `students` table in Ruby.
+- [What are validations?](https://guides.rubyonrails.org/active_record_validations.html)
+- [Additional reference for Rails model validations](https://www.javatpoint.com/ruby-on-rails-validation)
 - The following validations must be added -
     * All attributes are mandatory
     * 0.0 <= CGPA <= 10.0
@@ -52,7 +57,6 @@ end
 ```
 - Implement the following instance methods -
     * Implement an instance method `display_name` which returns the full name in the following format: `<First name>-<Middle name>-<Last name>`
-
 - Implement the model and test out your work by running: 
 ```bash
 rails test:models
